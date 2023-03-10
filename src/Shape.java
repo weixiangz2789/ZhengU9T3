@@ -10,6 +10,8 @@ public class Shape {
   // public constants
   public static final String RECTANGLE = "Rectangle"; // constant for rectangle
   public static final String OVAL = "Oval";           // constant for oval
+  public static final String ARC = "Arc";
+  public static final String LINE = "Line";
 
   // private instance variables
   private Color color; // color to draw shape in
@@ -77,6 +79,12 @@ public class Shape {
   public void setPoint2Values(int newX, int newY) {
     p2.x = newX;
     p2.y = newY;
+  }
+  public Point getCoord1(){
+    return p1;
+  }
+  public Point getCoord2(){
+    return p2;
   }
   
   /** Method to draw the shape given the graphics context

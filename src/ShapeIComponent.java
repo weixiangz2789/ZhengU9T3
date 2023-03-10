@@ -98,7 +98,7 @@ public class ShapeIComponent extends JComponent {
     int width = getWidth();
     
     // clear using the background color
-    g.setColor(backgroundColor);
+    g.setColor(Color.BLACK);
     g.fillRect(0, 0, width, height);
      
     // loop through the shape objects and draw each one
@@ -143,6 +143,12 @@ public class ShapeIComponent extends JComponent {
         currentShape = new Rectangle();
       } else if (currShapeType.equals(Shape.OVAL)) {
         currentShape = new Oval();
+      }
+      else if (currShapeType.equals(Shape.ARC)){
+        currentShape = new Arc();
+      }
+      else if (currShapeType.equals(Shape.LINE)){
+        currentShape = new Line();
       }
       
       // set point 1 in the new shape

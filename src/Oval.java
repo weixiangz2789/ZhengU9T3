@@ -1,4 +1,4 @@
-import java.awt.Graphics;
+import java.awt.*;
 
 /**
  * Class Oval:  inherits from Shape and handles oval shapes
@@ -17,11 +17,12 @@ public class Oval extends Shape {
   @Override
   public void draw(Graphics g) {
     // set the color to draw the shape in
-    g.setColor(getColor());
+    g.setColor(Color.YELLOW);
     
     // draw the oval given the top left corner of the enclosing
     // rectangle and the width and height
     g.drawOval(getMinX(), getMinY(), getWidth(), getHeight()); // the getter methods here are INHERITED FROM SHAPE!
+    g.fillOval(getMinX(), getMinY(), getWidth(), getHeight());
   }
 }
 
